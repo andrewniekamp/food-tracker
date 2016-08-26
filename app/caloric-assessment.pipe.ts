@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from 'angular2/core';
 import { Food } from './food.model';
 
 @Pipe ({
-  name: "caloric-assessment",
+  name: "caloric",
   pure: false
 })
 
@@ -11,9 +11,9 @@ export class CaloricAssessmentPipe implements PipeTransform {
     var calorieAmt = info[0];
     var output: Food[] = [];
     for (var i= 0; i < input.length; i++) {
-      if (input[i].calories < calorieAmt) {
+      // if (input[i].calories < calorieAmt) {
           output.push(input[i]);
-      }
+      // }
     }
     return output;
   }
