@@ -4,37 +4,47 @@ $orangeYellow: #FED766;
 $teaGreen: #C7EFCF;
 $mellowApricot: #F0B67F;
 
-h1 {
-  color: blue;
-}
-
 body {
   background-image: url("/resources/images/strawberries.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 .total-wrapper {
   height: 100vh;
 }
+.top-wrapper {
+  margin-bottom: 30px;
+}
+
+.padding-box {
+  padding: 40px 30px;
+}
 
 .header {
-  height: 20%;
-  background-color: $mellowApricot;
+  min-height: 10%;
+  background-color: $pastelGrey;
+  text-align: center;
+  color: $sunsetOrange;
+  text-shadow: 1px 2px black;
+  h1 {
+    font-size: 60px;
+    font-family: 'Passion One', cursive;
+  }
 }
 .content-body {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
 .transparency {
-
-  height: 80%;
+  min-height: 90%;
 }
 
 .selected {
-  color: crimson;
+  color: $sunsetOrange;
 }
 
 .small {
@@ -45,12 +55,19 @@ body {
   text-align: center;
 }
 
-.add-button {
+.input-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.add-button, .filter-button {
+  background-color: $sunsetOrange;
+  height: 40px;
+  font-size: 20px;
   width: 100%;
 }
 
 .filter-button {
-  height: 40px;
 }
 
 .input-field {
