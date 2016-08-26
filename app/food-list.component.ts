@@ -29,6 +29,7 @@ export class FoodListComponent {
     this.foodList.push(
       new Food(food.name, food.calories, food.description)
     )
+    console.log(food);
   }
   foodClicked(clickedFood: Food): void {
     console.log("child", clickedFood);
