@@ -3,12 +3,13 @@ import { FoodComponent } from './food.component';
 import { Food } from './food.model';
 import { NewFoodComponent } from './new-food.component'
 import { CaloricAssessmentPipe } from './caloric-assessment.pipe';
+import { EditFoodDetailsComponent } from './edit-food-details.component';
 
 @Component({
   selector: 'food-list',
   inputs: ['foodList'],
   pipes: [CaloricAssessmentPipe],
-  directives: [FoodComponent, NewFoodComponent],
+  directives: [FoodComponent, NewFoodComponent, EditFoodDetailsComponent],
   template: `
   <label>Filter by Calories (Default is 500):
     <input value="500" #calorieFilterAmt/>
@@ -29,6 +30,7 @@ import { CaloricAssessmentPipe } from './caloric-assessment.pipe';
     [class.selected]="currentFood === selectedFood"
     [food]="currentFood">
   </food-display>
+  <edit-food-details *ngIf="selectedFood" [food]="selectedFood"></edit-food-details>
   <new-food (onSubmitNewFood)="createFood($event)"></new-food>
   `
 })

@@ -9,7 +9,7 @@ import { Food } from './food.model';
 export class CaloricAssessmentPipe implements PipeTransform {
   transform(input: Food[], info) {
     var threshold = info[0].value;
-    var calorieAmt = info[1].value;
+    var calorieAmt = parseInt(info[1].value);
     var output: Food[] = [];
 
     if (threshold === 'under') {
