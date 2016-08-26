@@ -1,8 +1,10 @@
 import { Component } from 'angular2/core';
 import { Food } from './food.model'
+import { FoodListComponent } from './food-list.component';
 
 @Component({
   selector: 'my-app',
+  directives: [FoodListComponent],
   template: `
   <div class="container-fluid header">
     <img id="header-img" src="">
@@ -10,21 +12,18 @@ import { Food } from './food.model'
   </div>
   <div class="container">
     <food-list
-      [foodList]="foods"
-      (onFoodSelect)="foodWasSelected($event)">
+      [foodList]="foods">
     </food-list>
   </div>
   `
 })
 export class AppComponent {
-  public food: Food[];
+  public foods: Food[];
   constructor(){
-    this.food = [
-      new Food("Dragon's Blood Vermillion Ale", 8, "6.5%"),
-      new Food("Excalibur", 9, "7%"),
-      new Food("Griffin Sweat Pale Ale", 1, "14.5%"),
-      new Food("Eye of Newt Brew", 5, "12.5%"),
-      new Food("Shady Brownie Ale", 2, "3.5%")
+    this.foods = [
+      new Food("Burger", 600, "Big and greasy"),
+      new Food("Egg salad", 200, "Somewhat healthy?"),
+      new Food("Side salad", 30, "No dressing!")
     ];
   }
 }
