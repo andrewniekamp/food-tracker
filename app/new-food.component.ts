@@ -17,7 +17,9 @@ import { Food } from './food.model';
       <div class="col-sm-4">
         <input placeholder="Description" class="input-field" #newDescription>
       </div>
-      <button (click)="addFood(newName, newCalories, newDescription)" class="btn add-button">Add</button>
+      <div class="col-xs-12">
+        <button (click)="addFood(newName, newCalories, newDescription)" class="btn add-button">Add</button>
+      </div>
     </div>
   `
 })
