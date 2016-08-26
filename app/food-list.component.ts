@@ -1,11 +1,12 @@
 import { Component } from 'angular2/core';
 import { FoodComponent } from './food.component';
 import { Food } from './food.model';
+import { NewFoodComponent } from './new-food.component'
 
 @Component({
   selector: 'food-list',
   inputs: ['foodList'],
-  directives: [FoodComponent],
+  directives: [FoodComponent, NewFoodComponent],
   template: `
   <div class="row header-row">
     <div class="col-xs-4"><h3>Name</h3></div>
@@ -17,6 +18,7 @@ import { Food } from './food.model';
     [class.selected]="currentKeg === selectedKeg"
     [food]="currentFood">
   </food-display>
+  <new-food (onSubmitNewFood)="createFood($event)"></new-food>
   `
 })
 export class FoodListComponent {
