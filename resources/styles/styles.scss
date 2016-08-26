@@ -1,0 +1,72 @@
+$sunsetOrange: #FE5F55;
+$pastelGrey: #D6D1B1;
+$orangeYellow: #FED766;
+$teaGreen: #C7EFCF;
+$mellowApricot: #F0B67F;
+
+h1 {
+  color: blue;
+}
+
+body {
+  background-image: url("/resources/images/strawberries.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.total-wrapper {
+  height: 100vh;
+}
+
+.header {
+  height: 20%;
+  background-color: $mellowApricot;
+}
+.content-body {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.transparency {
+
+  height: 80%;
+}
+
+.selected {
+  color: crimson;
+}
+
+.small {
+  visibility: hidden;
+}
+
+#cal-input {
+  text-align: center;
+}
+
+.add-button {
+  width: 100%;
+}
+
+.filter-button {
+  height: 40px;
+}
+
+.input-field {
+  height: 40px;
+  font-size: 18px;
+  padding: 5px;
+}
+
+@media(max-width:767px){
+  .small {
+    visibility: visible;
+  }
+  .header-row {
+    display: none;
+  }
+  .input-field {
+    width: 100%;
+  }
+}

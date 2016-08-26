@@ -12,13 +12,13 @@ import { EditFoodDetailsComponent } from './edit-food-details.component';
   directives: [FoodComponent, NewFoodComponent, EditFoodDetailsComponent],
   template: `
   <label>Filter by Calories (Default is 500):
-    <input value="500" #calorieFilterAmt/>
-    <select class="filter" #selectValue>
+    <input id="cal-input" class="input-field" value="500" #calorieFilterAmt/>
+    <select class="input-field" #selectValue>
       <option selected value="all">Show All</option>
       <option value="under">Under</option>
       <option value="over">Over</option>
     </select>
-    <button (click)="onFilterClick(selectValue)">Filter</button>
+    <button class="btn filter-button" (click)="onFilterClick(selectValue)">Filter</button>
   </label>
   <div class="row header-row">
     <div class="col-xs-3"><h3>Date</h3></div>
