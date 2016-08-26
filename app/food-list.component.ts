@@ -11,19 +11,20 @@ import { CaloricAssessmentPipe } from './caloric-assessment.pipe';
   directives: [FoodComponent, NewFoodComponent],
   template: `
   <label>Filter by Calories:
-    <select (change)="onChange($event.target.value)" class="filter">
+    <input #calorieFilterAmt/>
+    <select class="filter" #selectValue>
       <option selected value="all">Show All</option>
       <option value="under">Under</option>
       <option value="over">Over</option>
     </select>
-    <input #calorieRange/>
+    <button (click)="onFilterClick(selectValue)">Filter</button>
   </label>
   <div class="row header-row">
     <div class="col-xs-4"><h3>Name</h3></div>
     <div class="col-xs-4"><h3>Calories</h3></div>
     <div class="col-xs-4"><h3>Description</h3></div>
   </div>
-  <food-display *ngFor="#currentFood of foodList | caloric:selectedCalories"
+  <food-display *ngFor="#currentFood of foodList | caloric: threshold:calorieFilterAmt"
     (click)="foodClicked(currentFood)"
     [class.selected]="currentFood === selectedFood"
     [food]="currentFood">
@@ -34,7 +35,7 @@ import { CaloricAssessmentPipe } from './caloric-assessment.pipe';
 export class FoodListComponent {
   public foodList: Food[];
   public selectedFood: Food;
-  public selectedCalories: string = "all";
+  public threshold: string = "all";
   createFood(food) {
     this.foodList.push(
       new Food(food.name, food.calories, food.description)
@@ -42,11 +43,9 @@ export class FoodListComponent {
     console.log(food);
   }
   foodClicked(clickedFood: Food): void {
-    console.log("child", clickedFood);
     this.selectedFood = clickedFood;
   }
-  onChange(optionFromMenu) {
-    this.selectedCalories = optionFromMenu;
-    console.log(this.selectedCalories);
+  onFilterClick(optionFromMenu) {
+    this.threshold = optionFromMenu;
   }
 }

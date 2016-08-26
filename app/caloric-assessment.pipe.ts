@@ -8,13 +8,29 @@ import { Food } from './food.model';
 
 export class CaloricAssessmentPipe implements PipeTransform {
   transform(input: Food[], info) {
-    var calorieAmt = info[0];
+    var threshold = info[0].value;
+    var calorieAmt = info[1].value;
     var output: Food[] = [];
-    for (var i= 0; i < input.length; i++) {
-      // if (input[i].calories < calorieAmt) {
-          output.push(input[i]);
-      // }
+
+    if (threshold === 'under') {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].calories < calorieAmt) {
+            output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (threshold === 'over') {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].calories > calorieAmt) {
+            output.push(input[i]);
+        }
+        return output;
+      }
+    } else {
+      for (var i = 0; i < input.length; i++) {
+        output.push(input[i]);
+      }
+      return output;
     }
-    return output;
   }
 }
