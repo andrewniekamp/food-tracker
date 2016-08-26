@@ -6,11 +6,7 @@ import { Food } from './food.model'
   inputs: ['food'],
   template: `
     <div class="row content">
-      <div class="col-sm-3">
-      <span class="small">Entered at </span><p>{{ food.logDate.getHours() }}:{{ food.logDate.getMinutes() }}:{{ food.logDate.getSeconds() }}
-      on
-      {{ food.logDate.getUTCMonth() + 1 }}/{{ food.logDate.getUTCDate() }}/{{ food.logDate.getUTCFullYear() }}
-      </p></div>
+      <div class="col-sm-3"><span class="small">Date: </span><p>{{ food.logDate }}</p></div> 
       <div class="col-sm-3"><span class="small">Name: </span><p>{{ food.name }}</p></div>
       <div class="col-sm-2"><span class="small">Calories: </span><p>{{ food.calories }}</p></div>
       <div class="col-sm-4"><span class="small">Description: </span><p>{{ food.description }}</p></div>
