@@ -9,6 +9,7 @@ import { Food } from './food.model'
       <div class="col-sm-4">Name: {{ food.name }}</div>
       <div class="col-sm-4">Calories: {{ food.calories }}</div>
       <div class="col-sm-4">Description: {{ food.description }}</div>
+      <div class="col-sm-4">Description: {{ food.eaten }}</div>
     </div>
   `
 })
