@@ -5,3 +5,16 @@ h1 {
 .selected {
   color: crimson;
 }
+
+.small {
+  visibility: hidden;
+}
+
+@media(max-width:767px){
+  .small {
+    visibility: visible;
+  }
+  .header-row {
+    display: none;
+  }
+}

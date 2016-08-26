@@ -21,8 +21,9 @@ import { EditFoodDetailsComponent } from './edit-food-details.component';
     <button (click)="onFilterClick(selectValue)">Filter</button>
   </label>
   <div class="row header-row">
-    <div class="col-xs-4"><h3>Name</h3></div>
-    <div class="col-xs-4"><h3>Calories</h3></div>
+    <div class="col-xs-3"><h3>Date</h3></div>
+    <div class="col-xs-3"><h3>Name</h3></div>
+    <div class="col-xs-2"><h3>Calories</h3></div>
     <div class="col-xs-4"><h3>Description</h3></div>
   </div>
   <food-display *ngFor="#currentFood of foodList | caloric: threshold:calorieFilterAmt"
