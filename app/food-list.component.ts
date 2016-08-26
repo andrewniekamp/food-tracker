@@ -16,6 +16,7 @@ import { CaloricAssessmentPipe } from './caloric-assessment.pipe';
       <option value="under">Under</option>
       <option value="over">Over</option>
     </select>
+    <input #calorieRange/>
   </label>
   <div class="row header-row">
     <div class="col-xs-4"><h3>Name</h3></div>
@@ -24,7 +25,7 @@ import { CaloricAssessmentPipe } from './caloric-assessment.pipe';
   </div>
   <food-display *ngFor="#currentFood of foodList"
     (click)="foodClicked(currentFood)"
-    [class.selected]="currentKeg === selectedKeg"
+    [class.selected]="currentFood === selectedFood"
     [food]="currentFood">
   </food-display>
   <new-food (onSubmitNewFood)="createFood($event)"></new-food>
