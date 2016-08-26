@@ -10,8 +10,8 @@ import { CaloricAssessmentPipe } from './caloric-assessment.pipe';
   pipes: [CaloricAssessmentPipe],
   directives: [FoodComponent, NewFoodComponent],
   template: `
-  <label>Filter by Calories:
-    <input #calorieFilterAmt/>
+  <label>Filter by Calories (Default is 500):
+    <input value="500" #calorieFilterAmt/>
     <select class="filter" #selectValue>
       <option selected value="all">Show All</option>
       <option value="under">Under</option>
