@@ -1,5 +1,5 @@
 {
-  "name": "angular2-skeleton-app",
+  "name": "cal-tracker",
   "version": "1.0.0",
   "scripts": {
     "start": "npm run tsc:w",

@@ -13,6 +13,7 @@ import { EditFoodDetailsComponent } from './edit-food-details.component';
   template: `
   <div class="padding-box">
     <div class="top-wrapper row">
+    <h3 id="filter-header">Filter</h3>
       <div class="col-sm-5">
         <p>Filter by Calories (Default is 500)</p>
         <input id="cal-input" class="input-field" value="500" #calorieFilterAmt/>

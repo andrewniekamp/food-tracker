@@ -9,7 +9,7 @@ import { FoodListComponent } from './food-list.component';
   <div class="total-wrapper">
     <div class="container-fluid header">
       <img id="header-img" src="">
-      <h1>Food tracker app</h1>
+      <h1>Cal-Tracker</h1>
     </div>
     <div class="transparency">
       <div class="container content-body">

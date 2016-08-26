@@ -16,8 +16,10 @@ body {
 .total-wrapper {
   height: 100vh;
 }
+
 .top-wrapper {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .padding-box {
@@ -25,22 +27,26 @@ body {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
   min-height: 10%;
-  background-color: $pastelGrey;
+  background-color: $teaGreen;
   text-align: center;
-  color: $sunsetOrange;
-  text-shadow: 1px 2px black;
   h1 {
+    color: $sunsetOrange;
+    text-shadow: 1px 2px black;
     font-size: 60px;
     font-family: 'Passion One', cursive;
   }
 }
+
 .content-body {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
 .transparency {
   min-height: 90%;
+  padding-top: 80px;
 }
 
 .selected {
@@ -49,6 +55,14 @@ body {
 
 .small {
   visibility: hidden;
+}
+
+.center {
+  text-align: center;
+}
+
+#filter-header {
+  text-align: left;
 }
 
 #cal-input {
@@ -67,23 +81,30 @@ body {
   width: 100%;
 }
 
-.filter-button {
-}
-
 .input-field {
   height: 40px;
   font-size: 18px;
   padding: 5px;
 }
 
+.food-items {
+  font-size: 16px;
+  border-bottom: 3px solid $teaGreen;
+}
+
 @media(max-width:767px){
   .small {
     visibility: visible;
+    font-size: 18px;
   }
   .header-row {
     display: none;
   }
   .input-field {
     width: 100%;
+  }
+  .food-items {
+    font-size: 24px;
+    border-bottom: 5px solid $teaGreen;
   }
 }

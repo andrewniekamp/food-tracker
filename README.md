@@ -1,4 +1,4 @@
-# Food Tracker
+# Cal-Tracker
 
 ##### By Andrew Niekamp
 
