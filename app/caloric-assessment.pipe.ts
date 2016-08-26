@@ -24,8 +24,8 @@ export class CaloricAssessmentPipe implements PipeTransform {
         if (input[i].calories > calorieAmt) {
             output.push(input[i]);
         }
-        return output;
       }
+      return output;
     } else {
       for (var i = 0; i < input.length; i++) {
         output.push(input[i]);
