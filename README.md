@@ -14,15 +14,16 @@ _Using Node in the root directory, type the following at the command prompt:
 
 _To install dependencies:_
 
-\>npm install
-
-\>bower install
-
+```
+npm install
+bower install
+```
 _To build the app and run the server:_
 
-\>gulp build
-
-\>gulp serve
+```
+gulp build
+gulp serve
+```
 
 _Navigate to http://localhost:3000 in your browser._
 
