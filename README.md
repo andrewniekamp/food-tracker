@@ -6,6 +6,8 @@
 
 _A food tracker app. The user can enter items with a name, calorie amount, and description._
 
+![Alt text](/resources/images/cal-tracker.png?raw=true "Optional Title")
+
 ## Setup/Installation
 
 _Files can be cloned from https://github.com/andrewniekamp/food-tracker and run in a browser (requires a server environment)._
